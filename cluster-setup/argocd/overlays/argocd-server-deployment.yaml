@@ -1,0 +1,13 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argocd-server
+spec:
+  selector: {}
+  template:
+    spec:
+      containers:
+        - name: argocd-server
+          image: dinoshauer/argocd:2.5.5-1
+          imagePullPolicy: IfNotPresent
